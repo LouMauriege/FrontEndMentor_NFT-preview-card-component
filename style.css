@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* Neutral */
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+/* Generic class */
+.flex {
+    display: flex;
+}
+/* Tag class */
+body {
+    background-color: var(--mainBG);
+    font-family: Outfit;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.005em;
+    line-height: 1.5em;
+}
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: var(--cyan);
+}
+hr {
+    color: var(--line);
+}
+h1 {
+    color: var(--white);
+    font-size: 21.5px;
+    margin: 17px 0;
+}
+/* Specific class */
+.card {
+    background-color: var(--cardBG);
+    color: var(--soft-blue);
+    width: 350px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: #00000039 0px 7px 29px 0px;
+}
+.header-image {
+    display: block;
+    position: relative;
+}
+.header-image svg {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-image::before {
+    content: "";
+    display: none;
+    background-color: var(--cyan);
+    opacity: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.header-image:hover svg, .header-image:hover::before{
+    display: block;
+}
+.image-cover {
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+}
+.image-avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 99px;
+    border: solid var(--white) 1px;
+}
+.card div:first-of-type {
+    margin: 10px 0;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.card .flex:first-of-type .flex{
+    align-items: center;
+    gap: 7px;
+}
+.ammount {
+    font-weight: 600;
+    color: var(--cyan);
+}
+.date {
+    font-weight: 400;
+}
+.artiste-section {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+    gap: 15px;
+}
+.artiste-section span {
+    color: var(--white)
+}
+/* Footer class */
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
